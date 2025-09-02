@@ -14,5 +14,5 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/Paritosh025/world_happiness.git
 cd world_happiness
-pip install -r requirements.txt
+
 
