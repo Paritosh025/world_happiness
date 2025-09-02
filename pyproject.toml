@@ -1,0 +1,17 @@
+[project]
+name = "happiness"
+version = "0.1.0"
+description = "A Python package to load, clean, and visualize World Happiness Report data from 2015–2019. Provides tools to compute weighted happiness scores, rank countries, and generate plots for data analysis and exploration."
+authors = [
+    { name = "Paritosh Sharma", email = "paritoshsharma025@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pandas",
+    "matplotlib",
+    "seaborn"
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
