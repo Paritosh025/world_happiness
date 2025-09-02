@@ -12,7 +12,7 @@ A Python package to load, clean, and visualize World Happiness Report data from 
 Clone the repository and install dependencies:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Paritosh025/world_happiness.git
 cd world_happiness
 pip install -r requirements.txt
 
