@@ -1,6 +1,6 @@
-# Happiness Package
-
-A Python package to load, clean, and visualize World Happiness Report data from 2015–2019.  
+# 🌍 Happiness Package
+A Python package to load, clean, analyze, and visualize World Happiness Report data (2015–2019).<br> 
+This package helps researchers and enthusiasts quickly explore happiness metrics and rankings across countries.
 
 ## Features
 - Load yearly World Happiness Report datasets
