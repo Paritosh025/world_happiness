@@ -21,9 +21,7 @@ One can also load a single year or combine multiple years for analysis.
 ```python
 
 def load_data(self, year):
-    """
-    Load dataset for a given year (2015–2019)
-    """
+
     file_map = {
         2015: "2015.csv",
         2016: "2016.csv",
@@ -45,10 +43,8 @@ def load_data(self, year):
 
 hh = HappinessHandler(data_dir="data")
 
-# Load data for a single year
 df_2015 = hh.load_data(2015)
 
-# Or load multiple years
 df_list = []
 for year in range(2015, 2020):
     df_year = hh.load_data(year)
@@ -78,8 +74,8 @@ def compute_weighted_score(self):
         'Social support': 0.25,
         'Healthy life expectancy': 0.2,
         'Freedom to make life choices': 0.15,
-        'Perceptions of corruption': 0.05, # Generally does not contribute much
-        'Generosity': 0.05 # It does not contribute much
+        'Perceptions of corruption': 0.05, 
+        'Generosity': 0.05 
      }
 self.data['Weighted_Score'] = (
             self.data['GDP per capita'] * w['GDP per capita'] +
@@ -104,7 +100,7 @@ hh.compute_weighted_score()
 ```python
 def get_top_countries(self, n=10):
         
-    self.compute_weighted_score()  # ensure column exists
+    self.compute_weighted_score()  
     df_avg = self.data.groupby('Country')['Weighted_Score'].mean().reset_index()
     df_top = df_avg.nlargest(n, 'Weighted_Score')
     return df_top
@@ -124,7 +120,7 @@ print(top_countries)
 ```python
 def get_country_rank(self, country):
        
-     self.compute_weighted_score()  # ensure column exists
+     self.compute_weighted_score()  
      df_avg = self.data.groupby('Country')['Weighted_Score'].mean().reset_index()
      df_avg = df_avg.drop_duplicates(subset='Country')
      df_avg = df_avg.sort_values(by='Weighted_Score', ascending=False).reset_index(drop=True)
@@ -152,7 +148,7 @@ except ValueError as e:
 ### Initialize the visualizer with the data:
 
 ```python
-hv = HappinessVisualizer(hh.data)
+hv = HappinessVisualizer(df_all) 
 ```
 
 ## 7. Bar plot of top countries
