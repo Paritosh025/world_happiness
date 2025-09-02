@@ -26,6 +26,7 @@ for year in range(2015, 2020):
 
 ```
 ## 3. Compute Weighted Score
+# These weighted scores are calculated based on a random formula, actually score column was already there restricting to perform self analysis and rest parameters were ignored so to tackle that I computed weighted_score given by this formula
 
 hh.compute_weighted_score()
 
