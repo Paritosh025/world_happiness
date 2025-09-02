@@ -30,6 +30,18 @@ for year in range(2015, 2020):
 
 hh.compute_weighted_score()
 
+
+## Load Data
+
+We initialize the handler and load data for 2015.  
+This will give us a DataFrame for analysis:
+
+```python
+hh = HappinessHandler(data_dir="data")
+df_2015 = hh.load_data(2015)
+df_2015.head()
+```
+
 ## 4. Get top countries
 
 top_countries = hh.get_top_countries(n=10)
