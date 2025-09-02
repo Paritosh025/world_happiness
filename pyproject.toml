@@ -1,7 +1,7 @@
 [project]
 name = "happiness"
 version = "0.1.0"
-description = "A Python package to load, clean, and visualize World Happiness Report data from 2015–2019. Provides tools to compute weighted happiness scores, rank countries, and generate plots for data analysis and exploration."
+description = "A Python package to easily load, clean, and explore World Happiness Report data from 2015–2019. Quickly compute weighted happiness scores, see how countries rank, and create clear, insightful visualizations for analysis."
 authors = [
     { name = "Paritosh Sharma", email = "paritoshsharma025@gmail.com" }
 ]
