@@ -36,6 +36,6 @@ pip-delete-this-directory.txt
 # MacOS
 .DS_Store
 
-# Colab uploads
-*.zip
+## Colab uploads
+# *.zip
 
