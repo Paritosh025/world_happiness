@@ -70,7 +70,7 @@ For full function explanations **with code**, see the [TUTORIAL.md](./TUTORIAL.m
 You can run the project in two ways:  
 
 ### ✅ Option A — Google Colab (recommended for a quick start)  
-- Open the notebook: **`notebooks/analysis.ipynb`** (or click the Colab badge at the top of this README).  
+- Open the notebook: **`notebooks/analysis_colab.ipynb** (or click the Colab badge at the top of this README).  
 - The notebook guides you through:  
   - Uploading & unzipping **`world_happiness.zip`** (contains `src/happiness` and `data`).  
   - Running the analysis end-to-end.  
@@ -114,9 +114,8 @@ You can run the project in two ways:
 ## ⚠️ Assumptions & Limitations  
 
 - **Weights are heuristic**: The factor weights reflect their assumed importance. They can be adjusted, but they are not learned from the data.  
-- **Column changes over time**: Some yearly data columns were renamed or changed slightly. We standardized them, but small differences may still exist.  
+- **Column changes over time**: Some yearly data columns were renamed or changed slightly. I renamed and standardized them, but small differences may still exist.  
 - **Data coverage**: Only countries and years available in the Kaggle datasets are included, so results are limited to that.
-
 
 ---
 
