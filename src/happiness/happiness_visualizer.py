@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 class HappinessVisualizer:
     """
     Class to create plots for World Happiness Report data.
@@ -13,10 +14,10 @@ class HappinessVisualizer:
         """
         Bar plot of top n countries based on Weighted_Score averaged over all years.
         """
-        df_avg = self.data.groupby('Country')['Weighted_Score'].mean().reset_index()
-        df_top = df_avg.nlargest(n, 'Weighted_Score')
+        df_avg = self.data.groupby("Country")["Weighted_Score"].mean().reset_index()
+        df_top = df_avg.nlargest(n, "Weighted_Score")
         plt.figure(figsize=(10, 5))
-        sns.barplot(x='Weighted_Score', y='Country', data=df_top)
+        sns.barplot(x="Weighted_Score", y="Country", data=df_top)
         plt.title(f"Top {n} countries by Weighted Score (2015-2019)")
         plt.show()
 
@@ -28,12 +29,12 @@ class HappinessVisualizer:
         """
         # If user doesn't provide columns, use defaults
         if x is None or y is None:
-            x = 'GDP per capita'
-            y = 'Weighted_Score'
+            x = "GDP per capita"
+            y = "Weighted_Score"
 
         # Filter by year if specified
         if year:
-            df = self.data[self.data['Year'] == year]
+            df = self.data[self.data["Year"] == year]
         else:
             df = self.data
 
@@ -51,9 +52,8 @@ class HappinessVisualizer:
         """
         Line plot of Weighted_Score over years for a specific country.
         """
-        df_country = self.data[self.data['Country'] == country]
+        df_country = self.data[self.data["Country"] == country]
         plt.figure(figsize=(8, 6))
-        sns.lineplot(x='Year', y='Weighted_Score', data=df_country, marker='o')
+        sns.lineplot(x="Year", y="Weighted_Score", data=df_country, marker="o")
         plt.title(f"Weighted Score trend over years for {country}")
         plt.show()
-
