@@ -107,6 +107,17 @@ You can run the project in two ways:
 
 ---
 
+### Project overview / Colab setup
+<img src="images/top_20_countries.png" alt="Colab setup" width="500">
+
+### Top countries chart
+<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Top 10 countries" width="500">
+
+### Country trend over time
+<img src="images/weighted_score_trend.png" alt="Country trend" width="500">
+
+---
+
 ## 📊 Interpreting Results  
 
 - A **higher Weighted Score** indicates stronger performance across the chosen drivers, not just a single metric.  
