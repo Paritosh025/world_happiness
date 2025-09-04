@@ -90,3 +90,25 @@ You can run the project in two ways:
    - src/happiness/ is available (contains the package files).
 5. Follow the same workflow as in Colab to reproduce the analysis.
 
+---
+
+## 📊 Interpreting Results  
+
+- A **higher Weighted Score** indicates stronger performance across the chosen drivers, not just a single metric.  
+- **Year-to-year changes** can reflect policy shifts, economic shocks, or measurement differences — use the trend plots to reason about stability vs. volatility.  
+- **Correlation views** help visually check whether increases in a driver (e.g., GDP per capita) track with gains in the composite score.  
+
+
+## ⚠️ Assumptions & Limitations  
+
+- **Heuristic weights**: The weights reflect relative influence; they’re transparent and adjustable but not learned from a model.  
+- **Schema drift**: Year-to-year changes in column names are normalized, but subtle definition changes may remain.  
+- **Data coverage**: Analysis is limited to countries/years present in the Kaggle files.  
+
+
+## 📑 Credits & License  
+
+- **Data**: World Happiness Report (Kaggle).  
+- **License**: See `LICENSE.txt` for details.  
+- **Docs & How-to**: See `TUTORIAL.md`.  
+
