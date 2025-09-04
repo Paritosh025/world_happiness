@@ -49,14 +49,14 @@ world_happiness/
 ## 🔧 Features & Functionality
 The project provides:  
 
-- **Data Handling (HappinessHandler):**  
+- **Data Handling (HappinessHandler): (Data loading & Metrics) **
   - Load yearly datasets (2015–2019)  
   - Clean and merge datasets  
   - Compute Weighted Score  
   - Rank countries & fetch top N countries  
   - Check country-specific ranks and scores  
 
-- **Visualization (HappinessVisualizer):**  
+- **Visualization (HappinessVisualizer): (Plots)**  
   - Plot top N happiest countries  
   - Explore correlations between factors (e.g., GDP vs Weighted Score)  
   - Show happiness trend of a specific country over time  
@@ -64,3 +64,29 @@ The project provides:
 For full function explanations **with code**, see the [TUTORIAL.md](./TUTORIAL.md).  
 
 ---
+
+## 🚀 How to Run the Project  
+
+You can run the project in two ways:  
+
+### ✅ Option A — Google Colab (recommended for a quick start)  
+- Open the notebook: **`notebooks/analysis.ipynb`** (or click the Colab badge at the top of this README).  
+- The notebook guides you through:  
+  - Uploading & unzipping **`world_happiness.zip`** (contains `src/happiness` and `data`).  
+  - Running the analysis end-to-end.  
+  - Generating rankings, trends, and visualizations.  
+
+### 💻 Option B — Local Machine (VS Code / PyCharm)  
+1. Clone or download this repo:  
+   ```bash
+   git clone https://github.com/Paritosh025/world_happiness.git
+   cd world_happiness
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Open the notebook notebooks/analysis.ipynb in Jupyter, VS Code, or PyCharm.
+4. Ensure that:
+   - data/ contains yearly CSVs (2015–2019).
+   - src/happiness/ is available (contains the package files).
+5. Follow the same workflow as in Colab to reproduce the analysis.
+
