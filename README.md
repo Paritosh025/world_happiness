@@ -96,13 +96,13 @@ You can run the project in two ways:
 
 (Add your own screenshots here for a more visual README. Place images in the `images/` folder and reference them below.)  
 
-### Project overview / Colab setup  
+### Top 20 countries by chart / Colab setup  
 ![Colab setup](images/top_20_countries.png)  
 
-### Top countries chart  
+### Weighted_Score vs GDP per Capita 
 ![Top 10 countries by Weighted Score](images/weighted_score_vs_gdp_per_capita.png)  
 
-### Country trend over time  
+### Germany trend over time
 ![Trend for <Country> 2015–2019](images/weighted_score_trend.png) 
 
 ---
