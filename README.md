@@ -92,12 +92,31 @@ You can run the project in two ways:
 
 ---
 
+## 📸 Screenshots  
+
+(Add your own screenshots here for a more visual README. Place images in the `images/` folder and reference them below.)  
+
+### Project overview / Colab setup  
+![Colab setup](images/colab_setup.png)  
+
+### Top countries chart  
+![Top 10 countries by Weighted Score](images/top10_weighted.png)  
+
+### Country trend over time  
+![Trend for <Country> 2015–2019](images/country_trend.png)  
+
+### Correlation view  
+![Weighted Score vs GDP](images/correlation.png)  
+
+---
+
 ## 📊 Interpreting Results  
 
 - A **higher Weighted Score** indicates stronger performance across the chosen drivers, not just a single metric.  
 - **Year-to-year changes** can reflect policy shifts, economic shocks, or measurement differences — use the trend plots to reason about stability vs. volatility.  
 - **Correlation views** help visually check whether increases in a driver (e.g., GDP per capita) track with gains in the composite score.  
 
+---
 
 ## ⚠️ Assumptions & Limitations  
 
@@ -105,10 +124,13 @@ You can run the project in two ways:
 - **Schema drift**: Year-to-year changes in column names are normalized, but subtle definition changes may remain.  
 - **Data coverage**: Analysis is limited to countries/years present in the Kaggle files.  
 
+---
 
 ## 📑 Credits & License  
 
 - **Data**: World Happiness Report (Kaggle).  
 - **License**: See `LICENSE.txt` for details.  
-- **Docs & How-to**: See `TUTORIAL.md`.  
+- **Docs & How-to**: See `TUTORIAL.md`.
+
+---
 
