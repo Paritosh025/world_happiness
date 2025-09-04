@@ -69,14 +69,15 @@ class HappinessHandler:
     def get_country_rank(self, country):
         """
         Returns rank of a specific country based on Weighted_Score averaged over all years.
+        Assumes that compute_weighted_score() has already been called once.
         """
-        self.compute_weighted_score()  # ensure column exists
+        # Group by country and take the mean Weighted_Score
         df_avg = self.data.groupby("Country")["Weighted_Score"].mean().reset_index()
-        df_avg = df_avg.drop_duplicates(subset="Country")
-        df_avg = df_avg.sort_values(by="Weighted_Score", ascending=False).reset_index(
-            drop=True
-        )
 
+        # Sort countries by score (highest first)
+        df_avg = df_avg.sort_values(by="Weighted_Score", ascending=False).reset_index(drop=True)
+
+        # Try to get the country's rank
         try:
             rank = df_avg.index[df_avg["Country"] == country][0] + 1
         except IndexError:
@@ -84,4 +85,6 @@ class HappinessHandler:
 
         total_countries = df_avg.shape[0]
         avg_score = df_avg.loc[df_avg["Country"] == country, "Weighted_Score"].values[0]
-        return int(round(rank)), int(total_countries), avg_score
+
+        return int(rank), int(total_countries), avg_score
+
