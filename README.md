@@ -103,19 +103,20 @@ You can run the project in two ways:
 
 ---
 
-## 📊 Interpreting Results  
+## 📊 Interpreting the Results  
 
-- A **higher Weighted Score** indicates stronger performance across the chosen drivers, not just a single metric.  
-- **Year-to-year changes** can reflect policy shifts, economic shocks, or measurement differences — use the trend plots to reason about stability vs. volatility.  
-- **Correlation views** help visually check whether increases in a driver (e.g., GDP per capita) track with gains in the composite score.  
+- **Higher Weighted Scores** indicate a country is performing better overall across the selected factors, not just in a single area.  
+- **Year-to-year changes** highlight how policies, economic events, or other factors influence happiness over time—trend plots help spot stability or sudden shifts.  
+- **Correlation plots** show whether improvements in one factor (e.g., GDP per capita) are linked to gains in the overall score.  
 
 ---
 
 ## ⚠️ Assumptions & Limitations  
 
-- **Heuristic weights**: The weights reflect relative influence; they’re transparent and adjustable but not learned from a model.  
-- **Schema drift**: Year-to-year changes in column names are normalized, but subtle definition changes may remain.  
-- **Data coverage**: Analysis is limited to countries/years present in the Kaggle files.  
+- **Weights are heuristic**: The factor weights reflect their assumed importance. They can be adjusted, but they are not learned from the data.  
+- **Column changes over time**: Some yearly data columns were renamed or changed slightly. We standardized them, but small differences may still exist.  
+- **Data coverage**: Only countries and years available in the Kaggle datasets are included, so results are limited to that.
+
 
 ---
 
