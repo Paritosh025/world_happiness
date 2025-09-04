@@ -1,18 +1,17 @@
-# 🌍 Happiness Package
-A Python package to load, clean, analyze, and visualize World Happiness Report data (2015–2019).<br> 
-This package helps researchers and enthusiasts quickly explore happiness metrics and rankings across countries.
+# 🌍 World Happiness Analysis (2015–2019)
 
-## Features
-- Load yearly World Happiness Report datasets
-- Compute weighted happiness scores for countries
-- Get top countries and their ranks
-- Visualize data with bar plots, scatter plots, and trend lines
+## 📌 Problem Statement
+The goal of this project is to **analyze global happiness trends** based on multiple social and economic parameters.  
+Instead of relying on the direct "Happiness Score" column, a **Weighted Score** is computed by combining important factors with assigned weights:  
 
-## Installation
-Clone the repository and install dependencies:
+- GDP per capita (0.30)  
+- Social support (0.25)  
+- Healthy life expectancy (0.20)  
+- Freedom to make life choices (0.15)  
+- Perceptions of corruption (0.05)  
+- Generosity (0.05)  
 
-```bash
-git clone https://github.com/Paritosh025/world_happiness.git
-cd world_happiness
+This approach gives a more balanced and fair estimate of happiness across countries and years.
 
+---
 
