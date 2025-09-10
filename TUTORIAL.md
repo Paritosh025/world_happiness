@@ -136,11 +136,14 @@ def get_country_rank(self, country):
 
 country_name = input("Enter the country name to check its rank: ").strip()
 
+country_name = country_name.title()
+
 try:
     rank, total_countries, avg_score = hh.get_country_rank(country_name)
     print(f"{country_name} ranks {rank} out of {total_countries} countries with an average score of {avg_score:.2f}")
 except ValueError as e:
     print(e)
+
 ```
 
 ## 6. Visualize data
@@ -163,7 +166,7 @@ def plot_top_countries(self, n=10):
     plt.title(f"Top {n} countries by Weighted Score (2015-2019)")
     plt.show()
 
-hv.plot_top_countries(n=10)
+hv.plot_top_countries(n=20)
 ```
 
 ## 8. Scatter plot correlation
@@ -209,5 +212,6 @@ def plot_trend(self, country):
     plt.title(f"Weighted Score trend over years for {country}")
     plt.show()
 
-hv.plot_trend(country='Finland')
+hv.plot_trend(country='Norway')
+
 ```
