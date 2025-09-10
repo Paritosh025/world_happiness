@@ -31,22 +31,26 @@ The dataset comes from the official **[Kaggle World Happiness Report](https://ww
 The project is organized as follows:
 
 ```{raw}
+
 world_happiness/
 ├── data/                             # Raw datasets (2015.csv – 2019.csv)
+├── images/                           # Images used in README/visualizations
 ├── notebooks/                        # Jupyter / Colab notebooks
 │   ├── analysis.ipynb                # Main analysis notebook
-│   └── analysis_colab.ipynb 
+│   └── analysis_colab.ipynb          # Colab-ready notebook
 ├── src/
 │   └── happiness/                    # Core Python package
 │       ├── __init__.py
 │       ├── happiness_handler.py
 │       └── happiness_visualizer.py
 ├── world_happiness.zip               # Zipped folder (src + data) for Colab use
-├── requirements.txt                  # Dependencies
+├── requirements.txt                  # Project dependencies
 ├── pyproject.toml                    # Project build / packaging config
+├── .gitignore
 ├── LICENSE.txt
-├── README.md               
+├── README.md
 └── TUTORIAL.md                       # Detailed guide with code (function-by-function)
+
 ```
 
 ## 🔧 Features & Functionality
@@ -118,13 +122,13 @@ hv.plot_trend(country='Germany')
 ---
 
 ### Top 20 countries by chart
-<img src="images/top_20_countries.png" alt="Colab setup" width="1000">
+<img src="images/top_20_countries.png" alt="Colab setup" width="1200">
 
 ### Weighted_Score vs GDP per Capita 
-<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Top 10 countries" width="1000">
+<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Top 10 countries" width="1200">
 
 ### Germany trend over time
-<img src="images/weighted_score_trend.png" alt="Country trend" width="1000">
+<img src="images/weighted_score_trend.png" alt="Country trend" width="1200">
 
 ---
 
