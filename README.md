@@ -96,7 +96,7 @@ You can run the project in two ways:
 
 ⚡ Quick Usage Example
 
-```
+```python
 from happiness import HappinessHandler, HappinessVisualizer
 
 # Load data
@@ -104,12 +104,12 @@ hh = HappinessHandler(data_dir="data")
 hh.compute_weighted_score()
 
 # Get top 5 countries
-top_countries = hh.get_top_countries(n=5)
+top_countries = hh.get_top_countries(n=10)
 print(top_countries)
 
-# Visualize top 10 countries
+# Visualize top 20 countries
 hv = HappinessVisualizer(hh.data)
-hv.plot_top_countries(n=10)
+hv.plot_top_countries(n=20)
 
 # Plot trend of Germany
 hv.plot_trend(country='Germany')
