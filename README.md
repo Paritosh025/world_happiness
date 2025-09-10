@@ -69,8 +69,8 @@ For full function explanations **with code**, see the [TUTORIAL.md](./TUTORIAL.m
 
 You can run the project in two ways:  
 
-### ✅ Option A — Google Colab (recommended for a quick start)  
-- Open the notebook: **`notebooks/analysis.ipynb`** (or click the Colab badge at the top of this README).  
+### ☁️ Option A — Google Colab (recommended for a quick start)  
+- Open the notebook: **`notebooks/analysis_colab.ipynb**.  
 - The notebook guides you through:  
   - Uploading & unzipping **`world_happiness.zip`** (contains `src/happiness` and `data`).  
   - Running the analysis end-to-end.  
@@ -80,7 +80,7 @@ You can run the project in two ways:
 1. Clone or download this repo:  
    ```bash
    git clone https://github.com/Paritosh025/world_happiness.git
-   cd world_happiness
+   cd world_happiness ## to ensure path is correctly defined
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
@@ -88,7 +88,6 @@ You can run the project in two ways:
 4. Ensure that:
    - data/ contains yearly CSVs (2015–2019).
    - src/happiness/ is available (contains the package files).
-5. Follow the same workflow as in Colab to reproduce the analysis.
 
 ---
 
@@ -114,9 +113,8 @@ You can run the project in two ways:
 ## ⚠️ Assumptions & Limitations  
 
 - **Weights are heuristic**: The factor weights reflect their assumed importance. They can be adjusted, but they are not learned from the data.  
-- **Column changes over time**: Some yearly data columns were renamed or changed slightly. We standardized them, but small differences may still exist.  
+- **Column changes over time**: Some yearly data columns were renamed or changed slightly. I renamed and standardized them, but small differences may still exist.  
 - **Data coverage**: Only countries and years available in the Kaggle datasets are included, so results are limited to that.
-
 
 ---
 
