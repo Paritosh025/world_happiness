@@ -8,9 +8,6 @@ This tutorial demonstrates how to use the `happiness` package for loading, proce
 
 ```python
 
-from .happiness_handler import HappinessHandler
-from .happiness_visualizer import HappinessVisualizer
-
 from happiness import HappinessHandler, HappinessVisualizer
 ```
 
