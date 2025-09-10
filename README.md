@@ -97,8 +97,7 @@ You can run the project in two ways:
 ⚡ Quick Usage Example
 
 ```
-from happiness.happiness_handler import HappinessHandler
-from happiness.happiness_visualizer import HappinessVisualizer
+from happiness import HappinessHandler, HappinessVisualizer
 
 # Load data
 hh = HappinessHandler(data_dir="data")
