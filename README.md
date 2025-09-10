@@ -32,7 +32,8 @@ The project is organized as follows:
 world_happiness/
 ├── data/                   # Raw datasets (2015.csv – 2019.csv)
 ├── notebooks/              # Jupyter / Colab notebooks
-│   └── analysis.ipynb      # Main analysis notebook
+│   ├── analysis.ipynb      # Main analysis notebook
+│   └── analysis_colab.ipynb 
 ├── src/
 │   └── happiness/          # Core Python package
 │       ├── __init__.py
