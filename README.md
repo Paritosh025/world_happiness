@@ -30,21 +30,21 @@ The project is organized as follows:
 
 ```{raw}
 world_happiness/
-├── data/                   # Raw datasets (2015.csv – 2019.csv)
-├── notebooks/              # Jupyter / Colab notebooks
-│   ├── analysis.ipynb      # Main analysis notebook
+├── data/                             # Raw datasets (2015.csv – 2019.csv)
+├── notebooks/                        # Jupyter / Colab notebooks
+│   ├── analysis.ipynb                # Main analysis notebook
 │   └── analysis_colab.ipynb 
 ├── src/
-│   └── happiness/          # Core Python package
+│   └── happiness/                    # Core Python package
 │       ├── __init__.py
 │       ├── happiness_handler.py
 │       └── happiness_visualizer.py
-├── world_happiness.zip     # Zipped folder (src + data) for Colab use
-├── requirements.txt        # Dependencies
-├── pyproject.toml          # Project build / packaging config
+├── world_happiness.zip               # Zipped folder (src + data) for Colab use
+├── requirements.txt                  # Dependencies
+├── pyproject.toml                    # Project build / packaging config
 ├── LICENSE.txt
 ├── README.md               
-└── TUTORIAL.md             # Detailed guide with code (function-by-function)
+└── TUTORIAL.md                       # Detailed guide with code (function-by-function)
 ```
 
 ## 🔧 Features & Functionality
