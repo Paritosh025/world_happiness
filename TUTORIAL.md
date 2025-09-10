@@ -157,7 +157,7 @@ hv = HappinessVisualizer(df_all)
 This function creates a bar plot of the top n countries based on the average weighted score, making it easy to compare their overall happiness visually.
 
 ```python
-def plot_top_countries(self, n=10):
+def plot_top_countries(self, n=20):
 
     df_avg = self.data.groupby('Country')['Weighted_Score'].mean().reset_index()
     df_top = df_avg.nlargest(n, 'Weighted_Score')
