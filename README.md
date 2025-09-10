@@ -100,7 +100,7 @@ pip install -r requirements.txt
 4. Ensure that:
    - data/ contains yearly CSVs (2015–2019).
    - src/happiness/ is available (contains the package files).
-```
+     
 ---
 
 ⚡ Quick Usage Example
