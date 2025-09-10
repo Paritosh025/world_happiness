@@ -13,6 +13,8 @@ Instead of relying on the direct "Happiness Score" column, a **Weighted Score** 
 
 This approach gives a more balanced and fair estimate of happiness across countries and years.
 
+And it also leaves the room for playing with feature weights.
+
 ---
 
 ## 📊 Dataset
