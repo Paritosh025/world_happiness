@@ -56,7 +56,7 @@ world_happiness/
 ## 🔧 Features & Functionality
 The project provides:  
 
-- **Data Handling (HappinessHandler): (Data loading & Metrics) **
+- **Data Handling (HappinessHandler) – Data loading & Metrics**
   - Load yearly datasets (2015–2019)  
   - Clean and merge datasets  
   - Compute Weighted Score  
@@ -77,7 +77,7 @@ For full function explanations **with code**, see the [TUTORIAL.md](./TUTORIAL.m
 You can run the project in two ways:  
 
 ### ☁️ Option A — Google Colab (recommended for a quick start)  
-- Open the notebook: **`notebooks/analysis_colab.ipynb**.  
+- Open the notebook: **`notebooks/analysis_colab.ipynb`**.  
 - The notebook guides you through:  
   - Uploading & unzipping **`world_happiness.zip`** (contains `src/happiness` and `data`).  
   - Running the analysis end-to-end.  
@@ -91,7 +91,7 @@ You can run the project in two ways:
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-3. Open the notebook notebooks/analysis.ipynb in Jupyter, VS Code, or PyCharm.
+3. Open the notebook **`notebooks/analysis.ipynb`** in Jupyter, VS Code, or PyCharm.
 4. Ensure that:
    - data/ contains yearly CSVs (2015–2019).
    - src/happiness/ is available (contains the package files).
@@ -107,7 +107,7 @@ from happiness import HappinessHandler, HappinessVisualizer
 hh = HappinessHandler(data_dir="data")
 hh.compute_weighted_score()
 
-# Get top 5 countries
+# Get top 10 countries
 top_countries = hh.get_top_countries(n=10)
 print(top_countries)
 
@@ -122,13 +122,13 @@ hv.plot_trend(country='Germany')
 ---
 
 ### Top 20 countries by chart
-<img src="images/top_20_countries.png" alt="Colab setup" width="1200">
+<img src="images/top_20_countries.png" alt="Colab setup" width="900">
 
 ### Weighted_Score vs GDP per Capita 
-<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Top 10 countries" width="1200">
+<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Top 10 countries" width="900">
 
 ### Germany trend over time
-<img src="images/weighted_score_trend.png" alt="Country trend" width="1200">
+<img src="images/weighted_score_trend.png" alt="Country trend" width="900">
 
 ---
 
