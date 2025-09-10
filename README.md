@@ -83,7 +83,7 @@ You can run the project in two ways:
    cd world_happiness ## to ensure path is correctly defined
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   !pip install -r requirements.txt
 3. Open the notebook notebooks/analysis.ipynb in Jupyter, VS Code, or PyCharm.
 4. Ensure that:
    - data/ contains yearly CSVs (2015–2019).
