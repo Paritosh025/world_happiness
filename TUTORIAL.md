@@ -54,12 +54,14 @@ The dataset already includes a Score column, but it doesn’t always allow for c
 
 Each factor contributes differently to overall happiness:<br>
 
-GDP per capita – major contributor `0.3`<br>
-Social support – significant contributor `0.25`<br>
-Healthy life expectancy – important factor `0.2`<br>
-Freedom to make life choices – moderate influence `0.15`<br>
-Perceptions of corruption – minor influence`0.05`<br>
-Generosity – minor influence `0.05`<br>
+| Factor | Weight |
+|--------|--------|
+| GDP per capita | 0.30 |
+| Social support | 0.25 |
+| Healthy life expectancy | 0.20 |
+| Freedom to make life choices | 0.15 |
+| Perceptions of corruption | 0.05 |
+| Generosity | 0.05 |
 
 By assigning different weights to these indicators, the weighted score captures a more balanced and interpretable measure of happiness for each country. This allows for self-analysis and comparison across countries in a way that reflects the relative importance of these factors.
 
