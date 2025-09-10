@@ -1,19 +1,19 @@
 # 🌍 World Happiness Analysis (2015–2019)
 
 ## 📌 Problem Statement
-The goal of this project is to **analyze global happiness trends** based on multiple social and economic parameters.  
-Instead of relying on the direct "Happiness Score" column, a **Weighted Score** is computed by combining important factors with assigned weights:  
+This project analyzes **global happiness trends** based on multiple social and economic factors.  
+Instead of using the raw "Happiness Score," a **Weighted Score** is computed using these factors:
 
-- GDP per capita (0.30)  
-- Social support (0.25)  
-- Healthy life expectancy (0.20)  
-- Freedom to make life choices (0.15)  
-- Perceptions of corruption (0.05)  
-- Generosity (0.05)  
+| Factor | Weight |
+|--------|--------|
+| GDP per capita | 0.30 |
+| Social support | 0.25 |
+| Healthy life expectancy | 0.20 |
+| Freedom to make life choices | 0.15 |
+| Perceptions of corruption | 0.05 |
+| Generosity | 0.05 |
 
-This approach gives a more balanced and fair estimate of happiness across countries and years.
-
-And it also leaves the room for playing with feature weights.
+This weighted approach provides a **balanced estimate** of happiness across countries and years and allows you to experiment with custom weights.
 
 ---
 
@@ -86,11 +86,35 @@ You can run the project in two ways:
    cd world_happiness ## to ensure path is correctly defined
 2. Install dependencies:
    ```bash
-   !pip install -r requirements.txt
+   pip install -r requirements.txt
 3. Open the notebook notebooks/analysis.ipynb in Jupyter, VS Code, or PyCharm.
 4. Ensure that:
    - data/ contains yearly CSVs (2015–2019).
    - src/happiness/ is available (contains the package files).
+
+---
+
+⚡ Quick Usage Example
+
+```
+from happiness.happiness_handler import HappinessHandler
+from happiness.happiness_visualizer import HappinessVisualizer
+
+# Load data
+hh = HappinessHandler(data_dir="data")
+hh.compute_weighted_score()
+
+# Get top 5 countries
+top_countries = hh.get_top_countries(n=5)
+print(top_countries)
+
+# Visualize top 10 countries
+hv = HappinessVisualizer(hh.data)
+hv.plot_top_countries(n=10)
+
+# Plot trend of Germany
+hv.plot_trend(country='Germany')
+```
 
 ---
 
@@ -121,7 +145,7 @@ You can run the project in two ways:
 
 ---
 
-## 📑 Credits & License  
+## 📑 Credits
 
 - **Data**: World Happiness Report (Kaggle).  
 - **License**: See `LICENSE.txt` for details.  
@@ -129,3 +153,8 @@ You can run the project in two ways:
 
 ---
 
+## 📜 License
+
+- **MIT License**: See `LICENSE.txt` for details.  
+
+---
