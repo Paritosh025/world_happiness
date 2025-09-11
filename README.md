@@ -1,5 +1,12 @@
 # 🌍 World Happiness Analysis (2015–2019)
 
+---
+
+## 📖 Introduction
+This project explores global happiness patterns using the World Happiness Report (2015–2019) dataset. The goal is to perform data cleaning, transformation, and analysis to understand how different social and economic factors contribute to happiness across countries and over time.
+
+---
+
 ## 📌 Problem Statement
 This project analyzes **global happiness trends** based on multiple social and economic factors.  
 Instead of using the raw "Happiness Score," a **Weighted Score** is computed using these factors:
