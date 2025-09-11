@@ -39,7 +39,7 @@ world_happiness/
 │   ├── analysis.ipynb                # Main analysis notebook
 │   └── analysis_colab.ipynb          # Colab-ready notebook
 ├── src/
-│   └── happiness/                    # Core Python package
+│   └── happiness/                    # Python package
 │       ├── __init__.py
 │       ├── happiness_handler.py
 │       └── happiness_visualizer.py
