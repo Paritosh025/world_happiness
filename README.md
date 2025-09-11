@@ -13,7 +13,7 @@ Instead of using the raw "Happiness Score," a **Weighted Score** is computed usi
 | Perceptions of corruption | 0.05 |
 | Generosity | 0.05 |
 
-This weighted approach provides a **balanced estimate** of happiness across countries and years and allows you to experiment with custom weights.
+This weighted approach provides a **balanced estimate** of happiness across countries and years and allows one to experiment with custom weights.
 
 ---
 
