@@ -2,8 +2,6 @@
 
 > A data analysis project for exploring global happiness trends using World Happiness Report data (2015–2019).
 
-> Requested target repository name: `Plant-Species-Classification`
-
 ## 📌 Overview
 
 This repository contains a Python package (`happiness`) and notebooks to:
