@@ -1,15 +1,19 @@
-# 🌍 World Happiness Analysis (2015–2019)
+# 🌿 Plant-Speicies-Classification
 
----
+> A data analysis project for exploring global happiness trends using World Happiness Report data (2015–2019).
 
-## 📖 Introduction
-This project explores global happiness patterns using the World Happiness Report (2015–2019) dataset. The goal is to perform data cleaning, transformation, and analysis to understand how different social and economic factors contribute to happiness across countries and over time.
+## 📌 Overview
 
----
+This repository contains a Python package (`happiness`) and notebooks to:
+- load yearly World Happiness datasets,
+- standardize and combine them,
+- compute a custom **Weighted_Score**,
+- rank countries and inspect country-level performance,
+- generate visual insights using plots.
 
-## 📌 Problem Statement
-This project analyzes **global happiness trends** based on multiple social and economic factors.  
-Instead of using the raw "Happiness Score," a **Weighted Score** is computed using these factors:
+## 🎯 Problem Statement
+
+Instead of relying only on the raw happiness score, this project computes a custom **Weighted_Score** from key indicators:
 
 | Factor | Weight |
 |--------|--------|
@@ -20,156 +24,112 @@ Instead of using the raw "Happiness Score," a **Weighted Score** is computed usi
 | Perceptions of corruption | 0.05 |
 | Generosity | 0.05 |
 
-This weighted approach provides a **balanced estimate** of happiness across countries and years and allows one to experiment with custom weights.
-
----
+This gives a balanced and customizable view of country happiness across years.
 
 ## 📊 Dataset
-The dataset comes from the official **[Kaggle World Happiness Report](https://www.kaggle.com/datasets/unsdsn/world-happiness)**.  
 
-- Covers **5 years**: 2015 to 2019.  
-- Data is provided as separate CSV files (`2015.csv`, `2016.csv`, …, `2019.csv`).  
-- Columns across years were inconsistent → unnecessary ones were removed, and consistent features were kept.  
-- Finally, all years were merged into **one unified dataset** for analysis.
+Source: **[Kaggle – World Happiness Report](https://www.kaggle.com/datasets/unsdsn/world-happiness)**
 
----
+- Years covered: **2015–2019**
+- Raw files: `2015.csv`, `2016.csv`, `2017.csv`, `2018.csv`, `2019.csv`
+- Inconsistent yearly columns are standardized before analysis
+- Data is merged into one analysis-ready DataFrame
 
-## ⚙️ Project Structure
-The project is organized as follows:
+## 🗂️ Project Structure
 
-```{raw}
-
-world_happiness/
+```text
+Plant-Speicies-Classification/
 ├── data/                             # Raw datasets (2015.csv – 2019.csv)
-├── images/                           # Images used in README/visualizations
+├── images/                           # README plot images
 ├── notebooks/                        # Jupyter / Colab notebooks
-│   ├── analysis.ipynb                # Main analysis notebook
-│   └── analysis_colab.ipynb          # Colab-ready notebook
+│   ├── analysis.ipynb
+│   └── analysis_colab.ipynb
 ├── src/
-│   └── happiness/                    # Python package
+│   └── happiness/
 │       ├── __init__.py
-│       ├── happiness_handler.py
-│       └── happiness_visualizer.py
-├── world_happiness.zip               # Zipped folder (src + data) for Colab use
-├── requirements.txt                  # Project dependencies
-├── pyproject.toml                    # Project build / packaging config
-├── .gitignore
+│       ├── happiness_handler.py      # Data loading, scoring, ranking
+│       └── happiness_visualizer.py   # Plotting utilities
+├── world_happiness.zip               # Colab-ready zip (data + package)
+├── requirements.txt
+├── pyproject.toml
+├── TUTORIAL.md                       # Function-level guide
 ├── LICENSE.txt
-├── README.md
-└── TUTORIAL.md                       # Detailed guide with code (function-by-function)
-
+└── README.md
 ```
 
-## 🔧 Features & Functionality
-The project provides:  
+## ✨ Features
 
-- **Data Handling (HappinessHandler) – Data loading & Metrics**
-  - Load yearly datasets (2015–2019)  
-  - Clean and merge datasets  
-  - Compute Weighted Score  
-  - Rank countries & fetch top N countries  
-  - Check country-specific ranks and scores  
+### `HappinessHandler`
+- Load data year-wise (`load_data`)
+- Compute weighted score (`compute_weighted_score`)
+- Retrieve top countries (`get_top_countries`)
+- Get rank and score for a specific country (`get_country_rank`)
 
-- **Visualization (HappinessVisualizer) – Plots** 
-  - Plot top N happiest countries  
-  - Explore correlations between factors (e.g., GDP vs Weighted Score)  
-  - Show happiness trend of a specific country over time  
+### `HappinessVisualizer`
+- Bar chart of top countries (`plot_top_countries`)
+- Correlation scatter plot (`plot_correlation`)
+- Country trend over years (`plot_trend`)
 
-For full function explanations **with code**, see the [TUTORIAL.md](./TUTORIAL.md).  
+## 🚀 Getting Started
 
----
+### Option A: Google Colab
+1. Open `notebooks/analysis_colab.ipynb`
+2. Upload and unzip `world_happiness.zip`
+3. Run notebook cells to reproduce analysis and plots
 
-## 🚀 How to Run the Project  
+### Option B: Local
 
-You can run the project in two ways:  
-
-### ☁️ Option A — Google Colab (recommended for a quick start)  
-- Open the notebook: **`notebooks/analysis_colab.ipynb`**.  
-- The notebook guides you through:  
-  - Uploading & unzipping **`world_happiness.zip`** (contains `src/happiness` and `data`).  
-  - Running the analysis end-to-end.  
-  - Generating rankings, trends, and visualizations.  
-
-### 💻 Option B — Local Machine (VS Code / PyCharm)  
-
-1. Clone or download this repo:  
 ```bash
-git clone https://github.com/Paritosh025/world_happiness.git
-cd world_happiness ## to ensure path is correctly defined
-```
-
-2. Install dependencies:
-```bash
+git clone https://github.com/Paritosh025/Plant-Speicies-Classification.git
+cd Plant-Speicies-Classification
 pip install -r requirements.txt
 ```
 
-3. Open the notebook **`notebooks/analysis.ipynb`** in Jupyter, VS Code, or PyCharm.
-4. Ensure that:
-   - data/ contains yearly CSVs (2015–2019).
-   - src/happiness/ is available (contains the package files).
-     
----
+Then open and run `notebooks/analysis.ipynb`.
 
-⚡ Quick Usage Example
+## ⚡ Quick Usage
 
 ```python
 from happiness import HappinessHandler, HappinessVisualizer
 
-# Load data
 hh = HappinessHandler(data_dir="data")
 hh.compute_weighted_score()
 
-# Get top 10 countries
 top_countries = hh.get_top_countries(n=10)
 print(top_countries)
 
-# Visualize top 20 countries
 hv = HappinessVisualizer(hh.data)
 hv.plot_top_countries(n=20)
-
-# Plot trend of Germany
-hv.plot_trend(country='Germany')
+hv.plot_trend(country="Germany")
 ```
 
----
+## 📈 Sample Visuals
 
-### Top 20 countries by chart
-<img src="images/top_20_countries.png" alt="Colab setup" width="900">
+### Top 20 Countries by Weighted Score
+<img src="images/top_20_countries.png" alt="Top 20 countries" width="900">
 
-### Weighted_Score vs GDP per Capita 
-<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Top 10 countries" width="900">
+### Weighted_Score vs GDP per Capita
+<img src="images/weighted_score_vs_gdp_per_capita.png" alt="Weighted score vs GDP" width="900">
 
-### Germany trend over time
+### Country Trend Over Time
 <img src="images/weighted_score_trend.png" alt="Country trend" width="900">
 
----
+## 🧠 Interpretation Notes
 
-## 📊 Interpreting the Results  
+- Higher `Weighted_Score` means stronger overall performance across selected factors.
+- Trend analysis highlights year-to-year stability or shifts.
+- Correlation plots help inspect links between economic/social factors and weighted happiness.
 
-- **Higher Weighted Scores** indicate a country is performing better overall across the selected factors, not just in a single area.  
-- **Year-to-year changes** highlight how policies, economic events, or other factors influence happiness over time—trend plots help spot stability or sudden shifts.  
-- **Correlation plots** show whether improvements in one factor (e.g., GDP per capita) are linked to gains in the overall score.  
+## ⚠️ Assumptions & Limitations
 
----
+- Weights are heuristic (user-defined), not learned by a model.
+- Source files vary by year; standardization is applied before analysis.
+- Results are limited to available countries/years in the source dataset.
 
-## ⚠️ Assumptions & Limitations  
+## 📚 Documentation
 
-- **Weights are heuristic**: The factor weights reflect their assumed importance. They can be adjusted, but they are not learned from the data.  
-- **Column changes over time**: Some yearly data columns were renamed or changed slightly. I renamed and standardized them, but small differences may still exist.  
-- **Data coverage**: Only countries and years available in the Kaggle datasets are included, so results are limited to that.
-
----
-
-## 📑 Credits
-
-- **Data**: World Happiness Report (Kaggle).  
-- **License**: See `LICENSE.txt` for details.  
-- **Docs & How-to**: See `TUTORIAL.md`.
-
----
+For detailed, function-by-function explanations and examples, see **[TUTORIAL.md](./TUTORIAL.md)**.
 
 ## 📜 License
 
-- **MIT License**: See `LICENSE.txt` for details.  
-
----
+MIT License — see **[LICENSE.txt](./LICENSE.txt)**.
