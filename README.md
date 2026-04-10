@@ -1,6 +1,8 @@
-# 🌿 Plant-Speicies-Classification
+# 🌍 World Happiness Analysis (2015–2019)
 
 > A data analysis project for exploring global happiness trends using World Happiness Report data (2015–2019).
+
+> Requested target repository name: `Plant-Speicies-Classification`
 
 ## 📌 Overview
 
@@ -38,7 +40,7 @@ Source: **[Kaggle – World Happiness Report](https://www.kaggle.com/datasets/un
 ## 🗂️ Project Structure
 
 ```text
-Plant-Speicies-Classification/
+world_happiness/
 ├── data/                             # Raw datasets (2015.csv – 2019.csv)
 ├── images/                           # README plot images
 ├── notebooks/                        # Jupyter / Colab notebooks
@@ -80,8 +82,8 @@ Plant-Speicies-Classification/
 ### Option B: Local
 
 ```bash
-git clone https://github.com/Paritosh025/Plant-Speicies-Classification.git
-cd Plant-Speicies-Classification
+git clone https://github.com/Paritosh025/world_happiness.git
+cd world_happiness
 pip install -r requirements.txt
 ```
 
